@@ -12,8 +12,8 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   // Await params here
-  const awaitedParams = await params; // <-- ADD THIS LINE
-  const categoryId = awaitedParams.category; // <-- USE awaitedParams
+  const awaitedParams = await params;
+  const categoryId = awaitedParams.category; 
 
   const category = allCategoriesData.find(cat => cat.id === categoryId);
 
@@ -25,8 +25,8 @@ export async function generateMetadata({ params }) {
 
 export default async function CategoryQuizzesPage({ params }) {
   // Await params here
-  const awaitedParams = await params; // <-- ADD THIS LINE
-  const categoryId = awaitedParams.category; // <-- USE awaitedParams
+  const awaitedParams = await params; 
+  const categoryId = awaitedParams.category; 
 
   const categoryQuizzes = allQuizzesData.filter(quiz => quiz.categoryId === categoryId);
 
