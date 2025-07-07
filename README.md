@@ -13,13 +13,13 @@
    - [API Routes](#api-routes)  
    - [next/image](#nextimage)  
 3. [Challenges Faced & Solutions](#3-challenges-faced--solutions)  
-4. [AI Coding Tools Utilization](#4-ai-coding-tools-utilization)  
+4. [AI Coding Tools Utilization](#4-ai-coding-tools-utilization)
 
 ---
 
 ## 1. Setup and Running Locally
 
-Follow these steps to get **QuizWarts** up and running on your local machine.
+Follow these steps to get **QuizzyPe** up and running on your local machine.
 
 ### 🛠️ Prerequisites
 
@@ -31,30 +31,32 @@ Follow these steps to get **QuizWarts** up and running on your local machine.
 Clone the repository:
 
 ```bash
-git clone (https://github.com/Minhaj078/QuizzyPe)
-cd quizwarts
+git clone https://github.com/Minhaj078/QuizzyPe
 ```
 Install dependencies:
 
 ```bash
+Copy
+Edit
 npm install
 # or
 yarn install
 ```
-🚀 Running the Development Server
+###🚀 Running the Development Server
 To run the application in development mode:
 
 ```bash
+Copy
+Edit
 npm run dev
 # or
 yarn dev
 ```
 Open http://localhost:3000 in your browser to see the application. The page will hot-reload as you make changes.
 ---
-
 ## 2. Design Decisions & Next.js Implementation
 
-QuizzyPe leverages several key **Next.js** features to deliver a fast, efficient, and scalable user experience.
+**QuizzyPe** leverages several key **Next.js** features to deliver a fast, efficient, and scalable user experience.
 
 ### 📄 Static Site Generation (SSG)
 
@@ -95,7 +97,6 @@ QuizzyPe leverages several key **Next.js** features to deliver a fast, efficient
 Handling quiz logic, state, and `localStorage` on the client while keeping static data rendering on the server.
 
 **Solution:**  
-
 - Marked `QuizClient.js` with `"use client"`.
 - Passed `initialQuizData` from the server component (`page.js`) as props.
 - Encapsulated all interactivity and state inside the client component.
@@ -108,16 +109,15 @@ AI tools significantly accelerated development. They were used for:
 
 ### 🐞 Debugging Help
 
-- Resolving persistent errors  
-- JSX namespace build issues with Recharts  
+- Resolving persistent errors
+- JSX namespace build issues with Recharts
 
 ### 📖 Learning & Explanation
 
-- Quick grasp of SSG, SSR, and `next/image`  
-- Tailwind best practices  
-- Scrollbar targeting and CSS quirks  
+- Quick grasp of SSG, SSR, and `next/image`
+- Tailwind best practices
+- Scrollbar targeting and CSS quirks
 
----
 ---
 
 ## 🤝 Contributing
@@ -127,9 +127,11 @@ We welcome contributions to make **QuizzyPe** better! Whether it’s a bug fix, 
 ### 🛠️ How to Contribute
 
 1. **Fork the Repository**  
-   Click the `Fork` button on the top right of this repo.
+   Click the **Fork** button on the top right of this repo.
 
 2. **Clone Your Fork**
 
-   ```bash
-   git clone (https://github.com/Minhaj078/QuizzyPe)
+```bash
+git clone https://github.com/your-username/QuizzyPe
+```
+
