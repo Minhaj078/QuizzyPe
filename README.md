@@ -1,3 +1,4 @@
+
 # 🧙‍♂️ QuizzyPe: Micro-Quiz Platform
 
 **QuizzyPe** is a modern, responsive micro-quiz platform built with **Next.js**. It allows users to browse quizzes across various subjects, take them, and track their performance over time.
