@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧙‍♂️ QuizzyPe: Micro-Quiz Platform
 
-## Getting Started
+**QuizzyPe** is a modern, responsive micro-quiz platform built with **Next.js**. It allows users to browse quizzes across various subjects, take them, and track their performance over time.
 
-First, run the development server:
+---
+
+## 📚 Table of Contents
+
+1. [Setup and Running Locally](#1-setup-and-running-locally)  
+2. [Design Decisions & Next.js Implementation](#2-design-decisions--nextjs-implementation)  
+   - [Static Site Generation (SSG)](#static-site-generation-ssg)  
+   - [Server-Side Rendering (SSR)](#server-side-rendering-ssr)  
+   - [API Routes](#api-routes)  
+   - [next/image](#nextimage)  
+3. [Challenges Faced & Solutions](#3-challenges-faced--solutions)  
+4. [AI Coding Tools Utilization](#4-ai-coding-tools-utilization)  
+
+---
+
+## 1. Setup and Running Locally
+
+Follow these steps to get **QuizWarts** up and running on your local machine.
+
+### 🛠️ Prerequisites
+
+- Node.js (v18.x or later recommended)  
+- npm or Yarn
+
+### 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone (https://github.com/Minhaj078/QuizzyPe)
+cd quizwarts
+```
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+```
+🚀 Running the Development Server
+To run the application in development mode:
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Open http://localhost:3000 in your browser to see the application. The page will hot-reload as you make changes.
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 2. Design Decisions & Next.js Implementation
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+QuizzyPe leverages several key **Next.js** features to deliver a fast, efficient, and scalable user experience.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 📄 Static Site Generation (SSG)
 
-## Learn More
+**Quiz Categories and Individual Quiz Pages:**
 
-To learn more about Next.js, take a look at the following resources:
+- `src/app/page.js`: The homepage fetches category data at build time and renders the quiz category cards.
+- `src/app/quiz/[id]/page.js`: This dynamic route uses `generateStaticParams` to pre-render individual quiz pages based on available quiz IDs.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✅ **Benefits**: Improves performance, SEO, and reduces server load as pages are served as static HTML.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+### 🔁 Server-Side Rendering (SSR)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Although not currently implemented, the architecture supports SSR for future dynamic features (e.g., authenticated dashboards).
+- At present, all data is imported statically into components.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 🔌 API Routes
+
+- Not yet used since all quiz data is imported directly.
+- For future features (e.g., login, external APIs), Next.js API routes will be used.
+
+---
+
+### 🖼️ next/image
+
+- `next/image` is used to optimize images (lazy-load, resize, modern formats like WebP) for better performance and UX across all devices and network conditions.
+
+---
+
+## 3. Challenges Faced & Solutions
+
+### 🧠 Client vs Server Component Interaction
+
+**Challenge:**  
+Handling quiz logic, state, and `localStorage` on the client while keeping static data rendering on the server.
+
+**Solution:**  
+
+- Marked `QuizClient.js` with `"use client"`.
+- Passed `initialQuizData` from the server component (`page.js`) as props.
+- Encapsulated all interactivity and state inside the client component.
+
+---
+
+## 4. AI Coding Tools Utilization
+
+AI tools significantly accelerated development. They were used for:
+
+### 🐞 Debugging Help
+
+- Resolving persistent errors  
+- JSX namespace build issues with Recharts  
+
+### 📖 Learning & Explanation
+
+- Quick grasp of SSG, SSR, and `next/image`  
+- Tailwind best practices  
+- Scrollbar targeting and CSS quirks  
+
+---
+---
+
+## 🤝 Contributing
+
+We welcome contributions to make **QuizzyPe** better! Whether it’s a bug fix, feature addition, UI improvement, or performance enhancement—your input is valuable.
+
+### 🛠️ How to Contribute
+
+1. **Fork the Repository**  
+   Click the `Fork` button on the top right of this repo.
+
+2. **Clone Your Fork**
+
+   ```bash
+   git clone (https://github.com/Minhaj078/QuizzyPe)
